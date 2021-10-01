@@ -1,0 +1,55 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  button {
+    border-width: 0;
+    background-color: inherit;
+  }
+}
+* {
+  @include reset;
+  font-size: $fontsize;
+  color: $secondary;
+  font-family: $fontfamily;
+  box-sizing: border-box;
+}
+body {
+  .lock {
+    overflow: hidden;
+  }
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  line-height: 29 / 24 * 100%;
+  color: black;
+  font-weight: 700;
+  @media (max-width: $md3) {
+    font-size: 1.25rem;
+  }
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  text-align: center;
+  min-height: 48px;
+  transition: all 0.3s;
+  &.btn-white {
+    color: $primary;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+}
+.title {
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 700;
+  text-align: center;
+}
