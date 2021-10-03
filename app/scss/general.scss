@@ -53,3 +53,10 @@ body {
   font-weight: 700;
   text-align: center;
 }
+
+.fly-image {
+	opacity: 1;
+	position: fixed;
+	z-index: 100;
+	transition: all 1s;
+}

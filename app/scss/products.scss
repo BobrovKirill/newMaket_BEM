@@ -59,6 +59,10 @@
 	&__more {
 		border: 1px solid $primary;
 		min-width: 245px;
+		&.hold{
+			opacity: 0.4;
+			cursor: default;
+		}
 	}
 }
 .item-product {
@@ -164,6 +168,10 @@
   &__button {
 		flex: 1 1 100%;
 		margin-bottom: 24px;
+		&.hold{
+			opacity: 0.4;
+			cursor: default;
+		}
   }
   &__link {
 		display: flex;
