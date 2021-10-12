@@ -5,14 +5,14 @@ section.page__main-slider.main-slider
 				h1.content-main__title High-Quality Furniture Just For You
 				.content-main__text Our furniture is made from selected and best quality materials that are suitable for your dream home
 				a(href="#").content-main__button.btn Shop Now
-			.main-slider__slider.slider-main#slider
-				.slider-main__controls.controls-slider-main 
+			.main-slider__slider.slider-main(data-slider="main")
+				.slider-main__controls.controls-slider-main(data-slider="control")
 						.controls-slider-main__dotts.swiper-bullets
 							span.swiper-bullet.swiper-bullet-active
 						.controls-slider-main__arrows.slider-arrows 
 							button(type="button").slider-arrow.slider-arrow__prev.icon-arrow-down
 							button(type="button").slider-arrow.slider-arrow__next.icon-arrow-down
-				.slider-main__body
+				.slider-main__body(data-slider="body")
 					.slider-main__slider.active
 						img(src="../images/main-slider/01.jpg", alt="Slider1")
 						a(href="#").slider-main__content

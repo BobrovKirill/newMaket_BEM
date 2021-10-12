@@ -1,0 +1,184 @@
+.rooms {
+  background-color: $gray4;
+  padding: 44px 0;
+  &__container {
+    @media (min-width: $md2) {
+      display: flex;
+    }
+  }
+  &__body {
+    flex: 0 0 465/1240 * 100%;
+    position: relative;
+    z-index: 5;
+    align-self: center;
+    @media (min-width: $md2) {
+      padding-right: 80px;
+    }
+    @media (max-width: $md1) {
+      padding-right: 30px;
+      flex: 0 0 350/1240 * 100%;
+    }
+    @media (max-width: $md2) {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  &__text {
+    line-height: 150%;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  &__button {
+    background-color: $primary;
+    color: $white;
+    min-width: 180px;
+    &:hover {
+      background-color: $redAccents;
+    }
+  }
+  &__slider {
+    flex: 1 1 auto;
+    align-self: flex-start;
+    @media (max-width: $md4) {
+      margin: 0 -15px;
+    }
+  }
+}
+.slider-rooms {
+  position: relative;
+  &__body {
+    position: relative;
+    display: flex;
+  }
+  &__slide {
+    display: none;
+    width: 372px;
+    position: absolute;
+    overflow: hidden;
+    height: 585px;
+		@media (max-width: $md1) {
+      width: 350px;
+    }
+		@media (max-width: $md1) {
+      width: 50%;
+    }
+    @media (max-width: $md3) {
+      width: 100%;
+    }
+    &.active {
+      display: block;
+      left: 0;
+      position: relative;
+      .slider-rooms__image {
+        height: 100%;
+      }
+      .slider-rooms__content {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        color: inherit;
+        max-width: 240px;
+        left: 24px;
+        bottom: 24px;
+        padding: 32px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition: opacity 0.3s;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          right: -48px;
+          width: 48px;
+          height: 48px;
+          background-color: $primary;
+          color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    &.second {
+      @media (min-width: $md3) {
+        display: block;
+        left: 52%;
+      }
+    }
+    &.last {
+      @media (min-width: $md1) {
+        display: block;
+        left: 102%;
+      }
+    }
+  }
+  &__image {
+    height: 100%;
+    transition: height 0.8s;
+    @media (min-width: $md3) {
+      height: 83%;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__content {
+    display: none;
+    opacity: 0;
+    position: absolute;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+  }
+  &__arrows {
+    pointer-events: none;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 48px);
+    left: 24px;
+    transform: translate(0px, -50%);
+    z-index: 5;
+    justify-content: space-between;
+    @media (min-width: $md1) {
+      width: calc(100% + 48px);
+      left: -24px;
+    }
+  }
+  &__dotts {
+    @media (min-width: $md3) {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      //left: 396px;
+			left: 52%;
+    }
+    @media (max-width: $md3) {
+      justify-content: center;
+      padding-top: 15px;
+    }
+  }
+}
+.label-slider {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 8px;
+  color: $gray3;
+  &__number {
+    color: inherit;
+  }
+  &__line {
+    height: 1px;
+    width: 27px;
+    margin: 0 8px;
+    background-color: $gray3;
+  }
+  &__text {
+    color: inherit;
+  }
+}
