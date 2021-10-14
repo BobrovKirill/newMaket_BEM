@@ -8,22 +8,22 @@ let path = {
     js: projectFolder + '/js/',
     img: projectFolder + '/images/',
     fonts: projectFolder + '/fonts/',
-    json: projectFolder + '/json/'
+    json: projectFolder + '/json/',
   },
   src: {
     pug: sourceFolder + '/*.pug',
     scss: sourceFolder + '/scss/app.scss',
-    js: sourceFolder + '/js/index.js',
+    js: sourceFolder + '/js/app.js',
     img: sourceFolder + '/images/**/*.{jpg,png,svg,gif,ico}',
     fonts: sourceFolder + '/fonts/*.ttf',
-    json: sourceFolder + '/json/*.json'
+    json: sourceFolder + '/json/*.json',
   },
   watch: {
     pug: sourceFolder + '/**/*.pug',
     scss: sourceFolder + '/**/*.scss',
     js: sourceFolder + '/js/**/*.js',
     img: sourceFolder + '/images/**/*.{jpg,png,svg,gif,ico}',
-    json: sourceFolder + '/json/*.json'
+    json: sourceFolder + '/json/*.json',
   },
   clean: './' + projectFolder + '/',
 };
@@ -31,6 +31,7 @@ let path = {
 const { src, dest } = require('gulp');
 const gulp = require('gulp');
 const gulpSass = require('gulp-sass')(require('node-sass'));
+const fileInclude = require('gulp-file-include');
 const gulpBable = require('gulp-babel');
 const browsersync = require('browser-sync').create();
 const del = require('del');
@@ -74,12 +75,8 @@ function scss2css() {
 
 function js() {
   return src(path.src.js)
+    .pipe(fileInclude())
     .pipe(dest(path.build.js))
-    .pipe(
-      gulpBable({
-        presets: ['@babel/env'],
-      })
-    )
     .pipe(browsersync.stream());
 }
 

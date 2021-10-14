@@ -1,6 +1,7 @@
 .furniture {
   padding-bottom: 85px;
-  &__container {
+  @media (max-width: $md3) {
+    padding-bottom: 0;
   }
   &__label {
     text-align: center;
@@ -43,15 +44,11 @@
     display: flex;
     align-items: flex-end;
   }
-  &__left-bottom {
-  }
   &__center {
     margin: 0 16px;
   }
   &__right-top {
-		display: flex;
+    display: flex;
     align-items: flex-end;
-  }
-  &__right-bottom {
   }
 }

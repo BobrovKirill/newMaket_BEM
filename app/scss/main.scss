@@ -26,13 +26,16 @@
     @media (min-width: $md2) {
       display: flex;
     }
+    @media (max-width: $md3) {
+      padding-top: 90px;
+    }
   }
   &__content {
     align-self: flex-start;
     flex: 0 0 494 / 1240 * 100%;
     margin-bottom: 80px;
-    @media (max-width: $md2) {
-      //margin: 0;
+    @media (max-width: $md3) {
+      margin-bottom: 40px;
     }
   }
   &__slider {

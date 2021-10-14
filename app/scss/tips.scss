@@ -11,44 +11,44 @@
 .slider-tips {
   position: relative;
   &__body {
-		display: flex;
-		margin: 0 -15px;
-		padding-bottom: 32px;
-		justify-content: space-between;
-		@media (max-width: $md3) {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
+    display: flex;
+    margin: 0 -15px;
+    padding-bottom: 32px;
+    justify-content: space-between;
+    @media (max-width: $md3) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__slide {
     display: flex;
     flex-direction: column;
     transition: box-shadow 0.3s;
-		max-width: 33%;
-		@media (max-width: $md2) {
-			max-width: 49.5%;
-		}
+    max-width: 33%;
+    @media (max-width: $md2) {
+      max-width: 49.5%;
+    }
     &:hover {
       box-shadow: 0 0 32px rgba(97, 97, 97, 0.2);
     }
     &.active {
-			order: 0;
-			@media (max-width: $md3) {
-				width:100%;
-			}
+      order: 0;
+      @media (max-width: $md3) {
+        width: 100%;
+      }
     }
     &.second {
-			order: 1;
-			@media (max-width: $md3) {
-				display: none;
-			}
+      order: 1;
+      @media (max-width: $md3) {
+        display: none;
+      }
     }
     &.last {
-			order: 2;
-			@media (max-width: $md2) {
-				display: none;
-			}
+      order: 2;
+      @media (max-width: $md2) {
+        display: none;
+      }
     }
   }
   &__image {
@@ -61,34 +61,34 @@
     }
   }
   &__content {
-		display: flex;
-		flex-direction: column;
-		padding: 15px;
-		flex: 1 1 auto;
-		align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    flex: 1 1 auto;
+    align-items: flex-start;
   }
   &__title {
-		flex: 1 1 auto;
-		color: inherit;
-		font-weight: 600;
-		line-height: 120%;
-		font-size: 24px;
-		transition: color 0.3s;
-		margin-bottom: 8px;
-		&:hover{
-			color: $primary;
-		}
+    flex: 1 1 auto;
+    color: inherit;
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 24px;
+    transition: color 0.3s;
+    margin-bottom: 8px;
+    &:hover {
+      color: $primary;
+    }
   }
   &__text {
-		color: $gray3;
-		font-size: 14px;
-		line-height: 150%;
+    color: $gray3;
+    font-size: 14px;
+    line-height: 150%;
   }
   &__dotts {
-		justify-content: center;
+    justify-content: center;
   }
   &__arrows {
-		pointer-events: none;
+    pointer-events: none;
     display: flex;
     position: absolute;
     top: 50%;
