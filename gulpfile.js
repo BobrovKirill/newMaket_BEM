@@ -39,12 +39,13 @@ const pug = require('gulp-pug');
 const autoprefixer = require('gulp-autoprefixer');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
-//const imagemin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
 //import imagemin from 'gulp-imagemin';
 //const concat = require('gulp-concat');
 
 function img() {
   return src(path.src.img)
+		.pipe(imagemin())
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream());
 }
